@@ -47,7 +47,6 @@ var calc = (function () {
 ### To run the function:
 
 ```
-calc.add(1,2).power(3).subtract(1).divide(2,1).multiply(3,4).equals()
+calc.add().power().subtract().divide().multiply().equals()
 ```
 
-### The result should equal = 156
