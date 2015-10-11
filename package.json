@@ -1,0 +1,22 @@
+{
+  "name": "calc-function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pennysmith1/calc-function.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pennysmith1/calc-function/issues"
+  },
+  "homepage": "https://github.com/pennysmith1/calc-function#readme",
+  "devDependencies": {
+    "jasmine": "^2.3.2"
+  }
+}
