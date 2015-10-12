@@ -1,45 +1,61 @@
-var calc = (function () {
-  var total = 0;
-  var index = 0;
-  return {
-    add: function () {
-      for(index in arguments) {
-        total += arguments[index];
-      }
-      return this;
-    },
-    power: function () {
-      for(index in arguments) {
-        total = Math.pow(total, arguments[index]);
-      }
-      return this;
-    },
-    subtract: function () {
-      for(index in arguments) {
-        total -= arguments[index];
-      }
-      return this;
-    },
-    divide: function () {
-      for(index in arguments) {
-        total /= arguments[index];
-      }
-    return this;
-    },
-    multiply: function () {
-      for(index in arguments) {
-        total *= arguments[index];
-      }
-    return this;
-    },
-    equals: function () {
-    var equal = total;
-    total = 0;  
-    return equal;
+function Calculator () {
+    this.total = 0;
+}
+
+Calculator.prototype.add = function () {
+    for (var index in arguments) {
+        this.total += arguments[index];
     }
-  };
-})();
+    return this;
+};
 
-// To run the function:
+Calculator.prototype.power = function () {
+    for (var index in arguments) {
+        this.total = Math.pow(this.total, arguments[index]);
+    }
+    return this;
+};
 
-calc.add().power().subtract().divide().multiply().equals()
+Calculator.prototype.subtract = function () {
+    for (var index in arguments) {
+        this.total -= arguments[index];
+    }
+    return this;
+};
+
+Calculator.prototype.divide = function () {
+    for (var index in arguments) {
+        this.total /= arguments[index];
+    }
+    return this;
+};
+
+Calculator.prototype.multiply = function () {
+    for (var index in arguments) {
+        this.total *= arguments[index];
+    }
+    return this;
+};
+
+Calculator.prototype.root = function () {
+    for (var index in arguments) {
+        this.total = Math.sqrt(this.total, arguments[index]);
+    }
+    return this;
+};
+
+Calculator.prototype.abs = function () {
+    this.total = Math.abs(this.total);
+    return this;
+};
+
+Calculator.prototype.equals = function () {
+    return this.total;
+};
+
+Calculator.prototype.clear = function () {
+    this.total = 0;  
+    return this;
+};
+
+module.exports = Calculator;
